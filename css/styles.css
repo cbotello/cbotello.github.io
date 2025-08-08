@@ -1,0 +1,10 @@
+:root{
+    --lightBlue: #1AB3E6;
+    --darkBlue: #145E75;
+    --white: #FCFCFC;
+    --dark: #06131A;
+}
+
+html{
+    font-size: 62.5%;
+}
