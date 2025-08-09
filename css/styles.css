@@ -1,10 +1,71 @@
 :root{
     --lightBlue: #1AB3E6;
-    --darkBlue: #145E75;
-    --white: #FCFCFC;
+    --midBlue: #145E75;
+    --darkBlue: #05141e;
+    --lightGray: #f3f3f3;
+
     --dark: #06131A;
+    --gray: #ddd;
+}
+
+*{
+    border: none;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 html{
     font-size: 62.5%;
+    box-sizing: border-box;
+    
 }
+
+body{
+    margin: 0;
+    padding-bottom: 60px;
+}
+
+.nav{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 5rem;
+    background-color: var(--darkBlue);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    z-index: 1000;
+    padding: 0;
+}
+
+.nav-item{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+}
+
+.nav-a{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1.5rem;
+    color: var(--gray);
+    text-decoration: none;
+}
+
+.nav-a .material-icons{
+    font-size: 2.4rem;
+    margin-bottom: 0.2rem; 
+}
+
+.nav-item.active, .nav-a.active, .material-icons.active{
+    background-color: var(--lightGray);
+    color:var(--dark);
+}
+
