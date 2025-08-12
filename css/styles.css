@@ -14,3 +14,36 @@ body{
     padding-bottom: 60px;
     font-family: "Space Mono", monospace;
 }
+
+a, a:hover, a:visited{
+    text-decoration: none;
+}
+
+.nav{
+    display: flex;
+    justify-content: space-around;
+    position: fixed;
+    bottom: 0;
+    top: auto;
+    background:  #12293c;
+    color: #ececec;
+    padding: 1rem;
+    width: 100%;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+.nav a{
+    color: #ececec;
+    transition: color 0.3s;
+}
+
+.nav a:hover{
+    color: #6eb9ff;
+}
+
+@media (min-width: 768px) {
+    .nav{
+        top: 0;
+        bottom: auto;
+    }
+}
