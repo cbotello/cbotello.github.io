@@ -49,10 +49,23 @@ a, a:hover, a:visited{
 }
 
 .bg-header{
-    background: url(../img/bg-img.jpeg) center/cover no-repeat fixed;
+    background: linear-gradient(rgba(0,0,0,0.9), rgba(0,0,0,0.5)), url(../img/bg-img.jpeg) center/cover no-repeat fixed;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
     height: 20rem;
     max-width: 100%;
+    font-size: 1.3em;
     transition: all 0.4s;
+}
+
+.bg-header-txt{
+    padding-left: 2rem;    
+}
+
+.header-txt{
+    color:#ececec;
+    padding: 0.3rem 0;
 }
 
 @media (min-width: 768px) {
@@ -66,8 +79,13 @@ a, a:hover, a:visited{
         margin: 0 0.5rem;        
     }
 
+    .bg-header-txt{
+        padding-left: 4rem;    
+    }
+
     .bg-header{
         height: 27rem;
+        font-size: 3rem;
     }
 
     .nav-top-txt{
