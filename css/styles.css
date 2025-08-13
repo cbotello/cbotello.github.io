@@ -25,11 +25,12 @@ a, a:hover, a:visited{
     position: fixed;
     bottom: 0;
     top: auto;
-    background:  #12293c;
+    background:  #071017;
     color: #ececec;
     padding: 0.5rem 1rem;
     width: 100%;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s;
 }
 
 .nav a{
@@ -47,6 +48,13 @@ a, a:hover, a:visited{
 
 }
 
+.bg-header{
+    background: url(../img/bg-img.jpeg) center/cover no-repeat fixed;
+    height: 20rem;
+    max-width: 100%;
+    transition: all 0.4s;
+}
+
 @media (min-width: 768px) {
     .nav{
         top: 0;
@@ -56,5 +64,13 @@ a, a:hover, a:visited{
 
     .nav a{
         margin: 0 0.5rem;        
+    }
+
+    .bg-header{
+        height: 27rem;
+    }
+
+    .nav-top-txt{
+        font-size: 1.3rem;
     }
 }
