@@ -79,6 +79,57 @@ a, a:hover, a:visited{
     border-radius: 6rem;
 }
 
+.content{
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+}
+
+.presentation, .projects{
+    width: 100%;
+    height: auto;
+    margin-bottom: 2rem;
+    font-size: 1.3rem;
+    line-height: 1.8rem;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+    border-radius: 1.5rem;
+    transition: all 0.3s;
+    padding: 1rem;
+}
+
+.txt-hed{
+    margin: 2rem 0;
+    font-weight: 800;
+}
+
+.me p:nth-child(2), .projects-content p:nth-child(2){
+    color: #4F4F4F;
+}
+
+.skills{
+    margin-top: 8rem;
+}
+
+.skills-list{
+    padding-left: 2rem;
+}
+
+.projects{
+    font-size: 1.3rem;
+}
+
+.projects-content img{
+    width: 100%;
+    height: auto;
+}
+
+.footer{
+    text-align: center;
+    color: #4F4F4F;
+    line-height: 1rem;
+    font-size: 0.8rem;
+}
+
 @media (min-width: 768px) {
     .nav{
         top: 0;
@@ -108,5 +159,22 @@ a, a:hover, a:visited{
         width: 14rem;
         height: 14rem;
         border-radius: 7rem;
+        margin-top: 3rem;
+    }
+
+    .content{
+        display: flex;
+        flex-direction: row;
+    }
+
+    .presentation{
+        width: 50%;
+        margin-right: 5rem;
+        box-shadow: none;
+    }
+
+    .projects-content img{
+        width: 100%;
+        height: auto;
     }
 }
