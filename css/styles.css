@@ -51,7 +51,8 @@ a, a:hover, a:visited{
 .bg-header{
     background: linear-gradient(rgba(0,0,0,0.9), rgba(0,0,0,0.5)), url(../img/bg-img.jpeg) center/cover no-repeat fixed;
     display: flex;
-    justify-content: flex-start;
+    flex-direction: column;
+    justify-content: space-evenly;
     align-items: center;
     height: 20rem;
     max-width: 100%;
@@ -66,6 +67,16 @@ a, a:hover, a:visited{
 .header-txt{
     color:#ececec;
     padding: 0.3rem 0;
+}
+
+.bg-picture{
+    width: 12rem;
+    height: 12rem;
+    background-image: url(../img/p-picture.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 6rem;
 }
 
 @media (min-width: 768px) {
@@ -84,11 +95,18 @@ a, a:hover, a:visited{
     }
 
     .bg-header{
+        flex-direction: row;
         height: 27rem;
         font-size: 3rem;
     }
 
     .nav-top-txt{
         font-size: 1.3rem;
+    }
+
+    .bg-picture{
+        width: 14rem;
+        height: 14rem;
+        border-radius: 7rem;
     }
 }
