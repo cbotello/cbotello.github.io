@@ -201,10 +201,10 @@ a, a:hover, a:visited{
         margin-right: 1rem;
     }
 
-    /*.st-row, .nd-row{
+    .st-row, .nd-row{
         display: flex;
         flex-direction: column;
-    }*/
+    }
     
     .nd-row{
         margin-top: 1rem;
