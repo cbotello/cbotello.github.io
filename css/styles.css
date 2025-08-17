@@ -85,7 +85,7 @@ a, a:hover, a:visited{
     padding: 2rem;
 }
 
-.presentation, .projects{
+.presentation, .projects, .social-media{
     width: 100%;
     height: auto;
     margin-bottom: 2rem;
@@ -99,23 +99,48 @@ a, a:hover, a:visited{
 
 .txt-hed{
     margin: 2rem 0;
+    font-size: 1.5rem;
     font-weight: 800;
 }
 
-.me p:nth-child(2), .projects-content p:nth-child(2){
-    color: #4F4F4F;
+.me , .projects-content p:nth-child(2){
+    color: #313131;
 }
 
+.me p:nth-child(3){
+    margin-top: 0.6rem;
+}
+
+.me p:nth-child(1), .me p:nth-child(2){
+    font-weight: 600;
+}
 .skills{
-    margin-top: 8rem;
+    margin-top: 5rem;
 }
 
 .skills-list{
-    padding-left: 2rem;
+    padding-left: 0.5rem;
 }
 
-.projects{
+.skills-list  p{
+    padding-left: 1rem;
+}
+
+.st-row, .nd-row{
+    display: flex;
+    justify-content: space-evenly;
+}    
+
+.nd-row{
+    margin-bottom: 2rem;
+}
+
+.projects, .contact{
     font-size: 1.3rem;
+}
+
+.projects-content{
+    text-align: center;
 }
 
 .projects-content img{
@@ -128,6 +153,10 @@ a, a:hover, a:visited{
     color: #4F4F4F;
     line-height: 1rem;
     font-size: 0.8rem;
+}
+
+.social-media{
+    text-align: center;
 }
 
 @media (min-width: 768px) {
@@ -168,13 +197,44 @@ a, a:hover, a:visited{
     }
 
     .presentation{
-        width: 50%;
-        margin-right: 5rem;
+        width: 35%;
+        margin-right: 1rem;
+    }
+
+    /*.st-row, .nd-row{
+        display: flex;
+        flex-direction: column;
+    }*/
+    
+    .nd-row{
+        margin-top: 1rem;
+    }
+
+    .htm, .cs, .js, .vs, .sq{
+        display: flex;
+        align-items: center;
+        font-size: 1.7rem;
+    }
+
+    .projects, .presentation, .social-media{
         box-shadow: none;
     }
 
     .projects-content img{
+        width: 50%;
+    }
+
+    .contact{
+        width: 25%;
+        margin-left: 1rem;
+    }
+
+    /*.projects-content img{
         width: 100%;
         height: auto;
+    }*/
+
+    .social-media{
+        text-align: center;
     }
 }
