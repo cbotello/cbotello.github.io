@@ -241,6 +241,51 @@ a, a:hover, a:visited{
     margin-bottom: 1rem;
 }
 
+.cardsInfo{
+    width: 100%;
+    height: auto;
+    margin-top: 6rem;
+}
+
+
+#schoolInfo, #jobInfo, #intsInfo{
+    max-width: 100%;
+    background: white;
+    padding: 20px;
+    border-radius: 2rem;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    text-align: center;
+
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: all 0.5s ease;
+}
+
+#schoolInfo.show, #jobInfo.show, #intsInfo.show{
+    opacity: 1;
+    max-height: 60rem; /* ajusta según el contenido */
+}
+
+#schoolInfo.show{
+    transform: translateY(-2rem);
+}
+
+#jobInfo.show{
+    transform: translateY(-6rem);
+}
+
+#intsInfo.show{
+    transform: translateY(-10rem);
+}
+
+.cardsInfo img{
+    width: 20rem;
+    height: auto;
+    transition: transform 0.4s ease, filter 0.4s ease;
+}
+
+
 .footer{
     text-align: center;
     color: #4F4F4F;
