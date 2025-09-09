@@ -1,3 +1,14 @@
+/* GLOBALES */
+:root{
+    --blancoFondo: #f4f4f4;
+    --blancoCard: #ffffff;
+    --blancoTexto: #ececec;
+    --separadorCard: #7a7e817f;
+    --navFondo: #071017;
+    --navHoverTexto: #001520;
+    --navHoverFondo: rgba(234, 234, 234, 0.9);
+}
+
 *{
     border: none;
     margin: 0;
@@ -10,6 +21,7 @@ html{
 }
 
 body{
+    background-color: var(--blancoFondo);
     margin: 0;
     padding-bottom: 60px;
     font-family: "Space Mono", monospace;
@@ -19,14 +31,19 @@ a, a:hover, a:visited{
     text-decoration: none;
 }
 
+img{
+    width: 100%;
+}
+/* NAVEGACION */
+
 .nav{
     display: flex;
     justify-content: space-around;
     position: fixed;
     bottom: 0;
     top: auto;
-    background:  #071017;
-    color: #ececec;
+    background:  var(--navFondo);
+    color: var(--blancoTexto);
     padding: 0.5rem 1rem;
     width: 100%;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
@@ -35,7 +52,7 @@ a, a:hover, a:visited{
 }
 
 .nav a{
-    color: #ececec;
+    color: var(--blancoTexto);
     padding: 0.8rem 2rem;
     border-radius: 0.5rem;
 }
@@ -43,11 +60,13 @@ a, a:hover, a:visited{
 .nav a:hover{
     transition: color 0.4s;
     transition: background 0.6s;
-    color: #001520;
-    background: rgba(234, 234, 234, 0.9);
+    color: var(--navHoverTexto);
+    background: var(--navHoverFondo);
     font-weight: bold;
 
 }
+
+/* ENCABEZADO */
 
 .bg-header{
     background: linear-gradient(rgba(0,0,0,0.9), rgba(0,0,0,0.5)), url(../img/bg-img.jpeg) center/cover no-repeat fixed;
@@ -66,7 +85,7 @@ a, a:hover, a:visited{
 }
 
 .header-txt{
-    color:#ececec;
+    color:var(--blancoTexto);
     padding: 0.3rem 0;
 }
 
@@ -80,73 +99,86 @@ a, a:hover, a:visited{
     border-radius: 6rem;
 }
 
-.content{
-    display: flex;
-    flex-direction: column;
-    padding: 2rem;
+/* CONTENIDO */ 
+
+.contenedor{
+    max-width: 1200px;
+    width: 95%;
+    margin: 0 auto;
 }
 
-.presentation, .projects, .social-media, .smedia-card, .about{
+.contenedor__aside__datos > p{
+    font-size: 1.3rem;
+}
+
+.contenedor__aside__datos > h2{
+    margin-bottom: 1.6rem;
+}
+
+.contenedor__aside__redes{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+}
+
+.contenedor__aside__redes > h2{
+    grid-column: 1 / 3;
+    margin-bottom: 1.8rem;
+    padding: 1rem 0;
+    border-bottom: 1px solid var(--separadorCard);
+}
+
+.contenedor__aside__datos, .contenedor__aside__redes, .contenedor__proyectos{
     width: 100%;
     height: auto;
-    margin-bottom: 2rem;
+
+    background-color: var(--blancoCard);
     font-size: 1.3rem;
     line-height: 1.8rem;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
-    border-radius: 1.5rem;
-    transition: all 0.3s;
-    padding: 1rem;
-}
 
-.txt-hed{
-    margin: 2rem 0;
-    font-size: 1.5rem;
-    font-weight: 800;
-}
-
-.me , .projects-content p:nth-child(2){
-    color: #313131;
-}
-
-.me p:nth-child(3){
-    margin-top: 0.6rem;
-}
-
-.me p:nth-child(1), .me p:nth-child(2){
-    font-weight: 600;
-}
-.skills{
-    margin-top: 5rem;
-}
-
-.skills-list{
-    padding-left: 0.5rem;
-}
-
-.skills-list  p{
-    padding-left: 1rem;
-}
-
-.st-row, .nd-row{
-    display: flex;
-    justify-content: space-evenly;
-}    
-
-.nd-row{
+    margin: 1.5rem 0;
     margin-bottom: 2rem;
+    padding: 1rem 5rem;
+
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+    border-radius: 0.8rem;
+
+    transition: all 0.3s;
 }
 
-.projects, .contact{
-    font-size: 1.3rem;
+.contenedor__aside__datos{
+    padding: 1rem 2rem;
+    margin: 1rem 0;
 }
 
-.projects-content{
-    text-align: center;
+.contenedor__proyectos{
+    padding: 3rem 2rem;
+    margin: 1rem 0;
 }
 
-.projects-content img{
-    width: 100%;
+.contenedor__proyectos > img{
+    display: flex;
+    margin: 0 auto;
+    
     height: auto;
+}
+
+.contenedor__aside__skills{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+    text-align: center;
+    margin: 3rem 0;
+    padding-inline: 5rem;
+}
+
+.lin{
+    grid-row: 2 / 3;
+    grid-column: 2 /3;
+}
+
+.sq{
+    grid-column: 3 /4;
 }
 
 .lin, .gh{
@@ -157,153 +189,12 @@ a, a:hover, a:visited{
     transform: scale(1.15);
 }
 
-.smedia-card{
-    text-align: center;
-}
-
-.sm-links{
-    display: flex;
-    justify-content: space-around;
-}
-
-.container{
-    display: flex;
-    gap: 2rem;
-    flex-wrap: wrap;
-    justify-content: center;
-    padding: 2rem;
-    margin: 2rem 0;
-}
-
-.card {
-    position: relative;
-    width: 30rem;
-    height: 20rem;
-    overflow: hidden;
-    border-radius: 12px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
-    cursor: pointer;
-}
-
-.card img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.4s ease, filter 0.4s ease;
-}
-
-.overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding: 1rem;
-    box-sizing: border-box;
-    font-size: 1.8rem;font-weight: 700;
-}
-
-.card.slide .overlay {
-    background: rgba(0,0,0,0.6);
-    opacity: 0;
-    transform: translateY(-100%);
-    transition: all 0.5s ease;
-  }
-
-  .card.slide:hover img {
-    transform: scale(1.1);
-  }
-
-  .card.slide:hover .overlay {
-    opacity: 1;
-    transform: translateY(0);
-  }
-
-.about{
-    width: 100%;
-    height: auto;
-    margin-bottom: 2rem;
-    font-size: 1.3rem;
-    line-height: 1.8rem;
-    padding-inline: 2rem;
-}
-
-.about h3{
-    margin-bottom: 1rem;
-}
-
-.about p{
-    margin-bottom: 1rem;
-}
-
-.cardsInfo{
-    width: 100%;
-    height: auto;
-    margin-top: 6rem;
-}
-
-
-#schoolInfo, #jobInfo, #intsInfo{
-    max-width: 100%;
-    background: white;
-    padding: 20px;
-    border-radius: 2rem;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-    text-align: center;
-
-    max-height: 0;
-    opacity: 0;
-    overflow: hidden;
-    transition: all 0.5s ease;
-}
-
-#schoolInfo.show, #jobInfo.show, #intsInfo.show{
-    opacity: 1;
-    max-height: 60rem; /* ajusta según el contenido */
-}
-
-#schoolInfo.show{
-    transform: translateY(-2rem);
-}
-
-#jobInfo.show{
-    transform: translateY(-6rem);
-}
-
-#intsInfo.show{
-    transform: translateY(-10rem);
-}
-
-.cardsInfo img{
-    width: 20rem;
-    height: auto;
-    transition: transform 0.4s ease, filter 0.4s ease;
-}
-
-
 .footer{
+    margin-top: 3rem;
     text-align: center;
-    color: #4F4F4F;
+    color: #000000;
     line-height: 1rem;
     font-size: 0.8rem;
-}
-
-@media (min-width: 481px) {
-
-
-    .presentation, .projects, .social-media, .smedia-card, .about{
-        box-shadow: none;
-    }
-
-    .sm-links{
-        justify-content: space-evenly;
-    }
-
 }
 
 @media (min-width: 768px) {
@@ -338,66 +229,49 @@ a, a:hover, a:visited{
         margin-top: 3rem;
     }
 
-    .content{
-        display: flex;
-        flex-direction: row;
-        justify-content: space-evenly;
+        .contenedor__aside{
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        column-gap: 1rem;
     }
 
-    .presentation{
-        width: 25%;
-        margin-right: 1rem;
+    .contenedor__aside__redes{
+        padding: 6rem 2rem;
+        margin: 1rem 0;
     }
 
-    .st-row, .nd-row{
-        display: flex;
-        flex-direction: column;
+    .contenedor__aside__redes > h2{
+        padding-top: 0;
+        margin-bottom: 6.8rem;
+    }
+
+    .contenedor__aside__skills{
+        padding-inline: 10rem;
+    }
+}
+
+@media (min-width: 992px) {
+    .layout{
+        display: grid;
+        grid-template-columns: 1fr 3fr;
+        column-gap: 2rem;
     }
     
-    .nd-row{
-        margin-top: 1rem;
+    .contenedor__aside{
+        display: block;
+    }
+    .contenedor__aside__redes{
+        grid-row: 2 / 3;
+        padding: 4rem 6rem;
+        max-height: 24rem;
+    }
+
+    .contenedor__aside__datos{
+        max-height: 35rem;
     }
 
     .htm, .cs, .js, .vs, .sq{
-        display: flex;
-        align-items: center;
-        font-size: 1.7rem;
+        padding-inline: 1rem;
     }
 
-    .projects, .presentation, .social-media{
-        box-shadow: none;
-    }
-
-    .projects{
-        width: 40%;
-    }
-
-    .projects-content img{
-        width: 50%;
-    }
-
-    .contact{
-        width: 25%;
-        margin-left: 1rem;
-    }
-
-    /*.projects-content img{
-        width: 100%;
-        height: auto;
-    }*/
-
-    .smedia-card {
-        max-width: 25rem;
-        margin: auto;
-        padding: 1.1rem;
-        border: 1px solid #e1e9ee;
-        border-radius: 16px;
-        text-align: center;
-        background: #fff;
-        box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-      }
-
-      .about{
-        padding-inline: 12rem;
-      }
 }
