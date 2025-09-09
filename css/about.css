@@ -10,7 +10,7 @@ img{
     width: 100%;
 }
 .container{
-    max-width: 1400px;
+    max-width: 1200px;
     width: 95%;
     margin: 0 auto;
 }
@@ -143,7 +143,7 @@ img{
 #intsInfo.show{
     transform: translateY(-10rem);
 }
-
+/*
 @media (min-width: 992px) {
     .layout__about{
         display: grid;
@@ -166,4 +166,4 @@ img{
     .cardsInfo{
         grid-column: 1 / 4;
     }
-}
+}*/
