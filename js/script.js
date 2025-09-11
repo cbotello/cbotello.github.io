@@ -13,10 +13,12 @@ clcSchool.addEventListener("click", () => {
         divJob.classList.remove("show");
         divInts.classList.remove("show");
     }
-    divSchool.scrollIntoView({
-    behavior: "smooth", 
-    block: "center"     
-    });
+    /*
+        divSchool.scrollIntoView({
+        behavior: "smooth", 
+        block: "center"     
+        });
+    */
     divSchool.classList.toggle("show");
 });
 
@@ -25,10 +27,12 @@ clcJob.addEventListener("click", () => {
         divSchool.classList.remove("show");
         divInts.classList.remove("show");
     }
-    divJob.scrollIntoView({
-    behavior: "smooth", 
-    block: "center"     
-    });
+    /*
+        divJob.scrollIntoView({
+        behavior: "smooth", 
+        block: "center"     
+        });
+    */
     divJob.classList.toggle("show");
 });
 
@@ -37,9 +41,11 @@ clcInts.addEventListener("click", () => {
         divJob.classList.remove("show");
         divSchool.classList.remove("show");
     }
-    divInts.scrollIntoView({
-    behavior: "smooth", 
-    block: "center"     
-    });
+    /*
+        divInts.scrollIntoView({
+        behavior: "smooth", 
+        block: "center"     
+        });
+    */
     divInts.classList.toggle("show");
 });
