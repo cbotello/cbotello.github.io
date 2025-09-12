@@ -135,7 +135,7 @@ img{
 }
 
 .ints_img:hover{
-    transform: scale(1.65);
+    transform: scale(1.40);
 }
 
 .img_border{
@@ -224,13 +224,18 @@ img{
 
 }
 
-@media (min-width: 992px) {
+@media (min-width: 1000px) {
     .cards{
         display: grid;
         grid-template-columns: 1fr 2fr;
     }
 
     .cardsGroup{
-        padding-inline: 4rem;
+        padding-inline: 2rem;
+    }
+
+    .ints_images_gaming{
+        display: flex;
+        flex-wrap: no-wrap;
     }
 }
