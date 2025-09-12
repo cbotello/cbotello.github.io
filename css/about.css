@@ -41,6 +41,8 @@ img{
     margin-bottom: 1.7rem;
 }
 
+
+
 .card {
     margin: 2rem 0;
     position: relative;
@@ -178,6 +180,11 @@ img{
     transition: all 0.5s ease;
 }
 
+#schoolInfo.hide{
+    max-height: 0;
+    opacity: 0;
+}
+
 #schoolInfo.show, #jobInfo.show, #intsInfo.show{
     opacity: 1;
     max-height: 100rem; 
@@ -208,6 +215,13 @@ img{
 
 .ints > h4 {
     margin-bottom: 2rem;
+}
+
+@media (min-width: 768px) {
+    .cards{
+
+    }
+
 }
 
 @media (min-width: 992px) {

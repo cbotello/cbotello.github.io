@@ -13,12 +13,7 @@ clcSchool.addEventListener("click", () => {
         divJob.classList.remove("show");
         divInts.classList.remove("show");
     }
-    /*
-        divSchool.scrollIntoView({
-        behavior: "smooth", 
-        block: "center"     
-        });
-    */
+
     divSchool.classList.toggle("show");
 });
 
