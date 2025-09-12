@@ -91,11 +91,6 @@ img{
     transform: translateY(0);
 }
 
-.cards{
-    display: grid;
-    grid-template-rows: 4;
-}
-
 .cardsInfo{
     width: 100%;
     height: auto;
