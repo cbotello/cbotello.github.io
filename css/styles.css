@@ -189,6 +189,29 @@ img{
     transform: scale(1.15);
 }
 
+.post{
+    display: flex;
+    align-items: center;
+    margin: 4rem 3rem;
+    gap: 3rem;
+    justify-content: space-between;
+}
+
+.post_info, .post_tags{
+    display:flex;
+    align-items: center;
+    gap: 2rem; 
+}
+
+.post_img{
+    width: 75px;
+}
+
+.post_img > img{
+    width: 100%;
+    border-radius: 2rem;
+}
+
 .footer{
     margin-top: 3rem;
     text-align: center;
