@@ -41,6 +41,50 @@ img{
     margin-bottom: 1.7rem;
 }
 
+@media (max-width: 767px) {
+    .cards{
+        display: grid;
+        grid-template-columns: 1fr;
+        justify-items: center;
+        grid-template-areas: 
+            "school"
+            "schoolInfo"
+            "job"
+            "jobInfo"
+            "ints"
+            "intsInfo"
+    } 
+
+    .cardsGroup, .cardsInfo{
+        display: contents;
+    }
+    
+    .cardsGroup .card#school{
+        grid-area: school;
+    }
+    
+    .cardsInfo .school{
+        grid-area: schoolInfo;
+    }
+    .cardsGroup .card#job{
+        grid-area: job;
+    }
+    .cardsInfo .job{
+        grid-area: jobInfo;
+    }
+    .cardsGroup .card#ints{
+        grid-area: ints;
+    }
+    .cardsInfo .ints{
+        grid-area: intsInfo;
+    }
+
+    .cardsGroup .card img, .cardsInfo img{
+        max-width: 100%;
+        height: auto;
+    }
+}
+
 .card {
     margin: 2rem 0;
     position: relative;
@@ -97,6 +141,10 @@ img{
     margin-top: 3rem;
 }
 
+.ints_images_gaming, .ints_images_modeling{
+    text-align: center;
+}
+
 .cardsInfo img{
 
     max-width: 30rem;
@@ -110,6 +158,7 @@ img{
     font-size: 1.6rem;
     font-weight:bolder;
     margin-bottom: 1rem;
+    text-align: center;
 }
 
 #uveg_img{
@@ -122,6 +171,8 @@ img{
     font-weight:bolder;
     margin-bottom: 1rem;
 }
+
+.career{text-align: center;}
 
 .ints_imgT{
     width: 8rem;
@@ -190,18 +241,6 @@ img{
     max-height: 100rem; 
 }
 
-#schoolInfo.show{
-    transform: translateY(-2rem);
-}
-
-#jobInfo.show{
-    transform: translateY(-6rem);
-}
-
-#intsInfo.show{
-    transform: translateY(-10rem);
-}
-
 .titles{
     text-align: center;
     margin-bottom: 4rem;
@@ -224,6 +263,11 @@ img{
         gap: 2rem;
     }
 
+    .cards{
+        height: 80rem;
+        max-height: 80rem;
+    }
+
     .card{
         width: 25rem;
         height: 15rem;
@@ -234,12 +278,25 @@ img{
         height: 100%;
     }   
 
+    #schoolInfo.show{
+        transform: translateY(-2rem);
+    }
+    
+    #jobInfo.show{
+        transform: translateY(-6rem);
+    }
+    
+    #intsInfo.show{
+        transform: translateY(-10rem);
+    }
+
 }
 
 @media (min-width: 1000px) {
     .cards{
         display: grid;
         grid-template-columns: 1fr 2fr;
+        max-height: 74rem;
     }
 
     .cardsGroup{
