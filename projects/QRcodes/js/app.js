@@ -43,7 +43,7 @@ function generarQR(){
             dark: color,
             light: '#fff'
         },
-        width: 200,
+        width: 280,
         margin: 2
     }, function (error){
         if(error) console.error(error);
