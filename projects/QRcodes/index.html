@@ -7,54 +7,37 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <div class="container">
-        <div class="venta">
-            <h2>Información de la venta</h2>
-            <div class="campoVenta">
-                <label for="nConsumo">Número de consumo</label>
-                <input type="text" id="nConsumo" disabled>
-            </div>
-            <div class="campoVenta">
-                <label for="cliente">Cliente</label>
-                <input type="text" id="cliente" disabled>
-            </div>
-            <div class="campoVenta">
-                <label for="total">Total</label>
-                <input type="text" id="total" disabled>
-            </div>
-            <button class="btn" id="btn-generarVenta" onclick="generarVenta()">Generar venta aleatoria</button>
-        </div>
-        <div class="formulario">
-            <h2>Generador de códigos QR</h2>
-            <div class="campo">
-                <label for="nombre">Nombre del código</label>
-                <input type="text" id="nombre" placeholder="Ej. qrFactura">
-            </div>
-            <div class="campo">
-                <label for="texto">Texto del código</label>
-                <input type="text" id="texto" placeholder="Ej. Factura en www.facturaAqui.com">
-            </div>
-            <div class="campo">
-                <label>Color del codigo
-                    <input type="color" class="colorPicker" value="#006eff" name="colorPicker">
-                </label>
-            </div>
-            
-                <button class="btn" id="btn-generar" onclick="generarQR()" disabled>Generar Codigo QR</button>
-                <button class="btn" id="btn-descargar" onclick="descargarQR()" disabled>Descargar QR</button>
-                <button class="btn" onclick="reiniciarFormulario()">Crear otro codigo</button>
-        </div>
-        <div class="preview">
-            <div class="phone-frame">
-                <div class="qr-container">
-                    <canvas id="qrCode"></canvas>
-                    <p>Escanéame</p>
-                </div>
-            </div>
-        </div>
+    <header>
+        <nav>
+            <a href="https://cbotello.github.io">
+                <img src="img/icon.jpg" alt="Home" class="nav-icon">
+            </a>
+            <ul class="nav-list">
+                <li><a href="qrcode.html">qrcode</a></li>
+                <li><a href="#">Acerca de</a></li>
+                <li><a href="index.html">Inicio</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="banner">
+        <img src="img/banner1.jpg" alt="Banner">
+        <h1>Librerias para generar códigos QR </h1>
     </div>
-
-    <script src="https://cdn.jsdelivr.net/npm/qrcode/build/qrcode.min.js"></script>
-    <script src="js/app.js"></script>
+    <div class="IndexContainer">
+        <div class="info">
+            <h2>Crea tu propio QR</h2>
+            <p>En este sitio encontrarás diferentes librerías para generar códigos QR en tus proyectos web. Estas librerías te permitirán crear códigos QR personalizados con facilidad, ya sea para compartir enlaces, información de contacto, o cualquier otro tipo de dato que desees codificar.</p>
+            <p>Explora las opciones disponibles y elige la que mejor se adapte a tus necesidades ya que cada librería tiene sus pros y sus contras.</p>
+        </div>
+        <div class="tiposCodigos">
+            <h3>Librerías disponibles</h3>
+            <ul>
+                <li><a href="qrcode.html">qrcode</a>: Una librería sencilla y fácil de usar para generar códigos QR en JavaScript. Ideal para proyectos pequeños y medianos.</li>
+                <div class="QRimages">
+                    <img src="img/qrb.png" alt="QR black"><img src="img/qrg.png" alt="QR green"><img src="img/qrr.png" alt="QR red">
+                </div>
+                <!--<li><a href="kjua.html">kjua</a>: Una librería más avanzada que ofrece una mayor personalización y opciones para generar códigos QR. Perfecta para proyectos que requieren características adicionales.</li>-->
+            </ul>
+        </div>
 </body>
 </html>

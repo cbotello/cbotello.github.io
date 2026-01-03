@@ -18,7 +18,9 @@ function generarVenta(){
     document.getElementById('total').value = `$ ${costo}`;
     nConsumo.value = numero;
 
-    textoInput.value = `venta No: ${numero}\nCliente: ${cliente}\nTotal: $ ${costo}`;
+    //textoInput.value = `venta No: ${numero}\nCliente: ${cliente}\nTotal: $ ${costo}`;
+    textoInput.value = `https://cbotello.github.io/projects/QRcodes/factura.html?numero=${numero}&cliente=${cliente.replace(' ', '_')}&total=${costo}`;
+    
     nombreInput.value = `Venta_${numero}_${cliente.replace(' ', '_')}`;
 }
 
@@ -43,7 +45,7 @@ function generarQR(){
             dark: color,
             light: '#fff'
         },
-        width: 280,
+        width: 200,
         margin: 2
     }, function (error){
         if(error) console.error(error);
